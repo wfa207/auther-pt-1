@@ -7,7 +7,8 @@ var User = require('../api/users/user.model')
 
 app.use(session({
 	// the following ensures that session IDs are not predictable
-	secret: 'tongiscool' // WHAT DOES THIS DO???
+	secret: 'tongiscool', // WHAT DOES THIS DO???
+	cookie: {maxAge: 1000 * 2}
 }));
 
 app.use(function(req, res, next) {
