@@ -25,6 +25,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
+  console.log('reqbody-->', req.body)
   User.create(req.body)
   .then(function (user) {
     res.status(201).json(user);
