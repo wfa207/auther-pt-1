@@ -1,8 +1,8 @@
-app.controller('loginCtrl', function($scope, $http, loginFactory) {
+app.controller('loginCtrl', function($scope, $http, AuthFactory) {
 	// var email = $scope.email;
 	// var password = $scope.password;
-	$scope.logIn = function (email, password) {
-		return loginFactory.logIn(email, password)
-	}
+	$scope.login = AuthFactory.login;
+	$scope.logout = AuthFactory.logout;
+	$scope.getCurrentUser = AuthFactory.getCurrentUser;
 
 })
